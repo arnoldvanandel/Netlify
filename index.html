@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N8n Test Landingspagina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>N8n Test Landingspagina</h1>
+
+        <div class="input-section">
+            <label for="n8nInput">Verstuur naar n8n:</label>
+            <input type="text" id="n8nInput" placeholder="Voer hier je tekst in...">
+            <button id="sendToN8n">Verstuur</button>
+        </div>
+
+        <div class="output-section">
+            <label for="n8nReturn">Antwoord van n8n:</label>
+            <textarea id="n8nReturn" rows="5" readonly placeholder="Wacht op antwoord van n8n..."></textarea>
+        </div>
+
+        <p id="errorMessage" class="error-message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
