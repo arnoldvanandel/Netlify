@@ -45,10 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const data = await response.json();
-            // Ga ervan uit dat n8n een JSON object teruggeeft
-            // Als n8n iets anders teruggeeft (bijv. platte tekst), moet je dit aanpassen
-            // n8nReturn.value = JSON.stringify(data, null, 2); // Toon de JSON netjes geformatteerd
-             n8nReturn.value = "Arnold is de beste"
+            
+            // Controleer of 'myField' bestaat in de ontvangen data
+            if (data && typeof data.myField !== 'undefined') {
+                n8nReturn.value = data.myField; // Toon alleen de waarde van 'myField'
+            } else {
+                n8nReturn.value = 'Geen "myField" gevonden in het antwoord.';
+                console.warn('Antwoord van n8n bevat geen "myField":', data);
+            }
         } catch (error) {
             console.error('Fout bij versturen naar n8n:', error);
             errorMessage.textContent = `Er is een fout opgetreden: ${error.message}`;
