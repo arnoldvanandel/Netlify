@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const errorMessage = document.getElementById('errorMessage');
 
     // **BELANGRIJK: VERVANG DIT DOOR JOUW N8N WEBHOOK URL**
-    const N8N_WEBHOOK_URL = 'JOUW_N8N_WEBHOOK_URL_HIER'; 
+    const N8N_WEBHOOK_URL = 'https://arnoldvandel.app.n8n.cloud/webhook-test/ce572106-c45e-4ef5-a6c8-02a488d95969'; 
 
     sendToN8nButton.addEventListener('click', async () => {
         const inputValue = n8nInput.value.trim();
