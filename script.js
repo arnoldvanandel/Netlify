@@ -43,9 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 throw new Error(`HTTP fout! Status: ${response.status}. Antwoord: ${JSON.stringify(errorData)}`);
             }
-
-            const data = await response.json();
-            
+       
             const data = await response.json();
             // Ga ervan uit dat n8n een JSON object teruggeeft
             // Als n8n iets anders teruggeeft (bijv. platte tekst), moet je dit aanpassen
