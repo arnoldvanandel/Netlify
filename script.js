@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
             // Ga ervan uit dat n8n een JSON object teruggeeft
             // Als n8n iets anders teruggeeft (bijv. platte tekst), moet je dit aanpassen
-            n8nReturn.value = JSON.stringify(data, null, 2); // Toon de JSON netjes geformatteerd
+            // n8nReturn.value = JSON.stringify(data, null, 2); // Toon de JSON netjes geformatteerd
+             n8nReturn.value = "Arnold is de beste"
         } catch (error) {
             console.error('Fout bij versturen naar n8n:', error);
             errorMessage.textContent = `Er is een fout opgetreden: ${error.message}`;
